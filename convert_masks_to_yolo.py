@@ -175,10 +175,12 @@ def main(args):
     image_file_lst = glob.glob(args.data + "/*")
     os.makedirs(args.output_dir, exist_ok=True)
     for image_file in image_file_lst:
-        image_name = image_file.split("/")[-1]
-        annotation_file = f"{args.annotation_dir}/{image_name.split('.')[0]}.txt"
-        output_file = f"{args.output_dir}/{image_name.split('.')[0]}.txt"
-        
+        image_name = os.path.basename(image_file)
+        base_name = os.path.splitext(image_name)[0]
+
+        annotation_file = os.path.join(args.annotation_dir, base_name + ".txt")
+        output_file = os.path.join(args.output_dir, base_name + ".txt")
+            
         if not os.path.exists(annotation_file):
             print(f"Annotation file not found: {annotation_file}")
             continue
