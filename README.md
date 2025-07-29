@@ -23,3 +23,7 @@ For example:
 
 <pre> python convert_masks_to_yolo.py --data afl_frames --annotation_dir afl_frames_auto_annotate_labels --output_dir afl_frames_yolo </pre>
 
+## Example result
+The annotated masks and bounding boxes are visualized on the original image to verify the accuracy of the annotation pipeline.
+![Annotation Comparison](annotation_comparison_afl_frames.png)
+

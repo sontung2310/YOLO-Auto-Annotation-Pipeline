@@ -216,8 +216,9 @@ def main(args):
             
             if fig is not None:
                 # Save the visualization
-                fig.savefig(f'annotation_comparison_{image_name}.png', dpi=300, bbox_inches='tight')
-                print(f"Saved visualization to annotation_comparison_{image_name}.png")
+                image_name_without_extension = image_name.split(".")[0]
+                fig.savefig(f'annotation_comparison_{image_name_without_extension}.png', dpi=300, bbox_inches='tight')
+                print(f"Saved visualization to annotation_comparison_{image_name_without_extension}.png")
             
         except FileNotFoundError as e:
             print(f"Error: File not found! {e}")
