@@ -6,9 +6,11 @@ This project provides a streamlined pipeline for automatically generating image 
 By combining a YOLO-based detector with a SAM (Segment Anything Model), this tool generates high-quality mask annotations and then converts them into YOLO-format bounding boxes. This approach significantly reduces annotation time, minimizes human effort, and accelerates dataset preparation for computer vision tasks.
 
 ## 1. Installation
+<pre> 
 git clone https://github.com/sontung2310/YOLO-Auto-Annotation-Pipeline.git
 cd project-name
 pip install requirements.txt
+</pre>
 
 ## 2. Generate Mask Annotations Using Ultralytics Data Annotator
 Use the script to automatically annotate images with masks using a detection and segmentation model:
