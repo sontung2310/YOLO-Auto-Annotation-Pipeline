@@ -7,9 +7,9 @@ import os
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--data", type=str, default="afl_frames")
-parser.add_argument("--annotation_dir", type=str, default="afl_frames_auto_annotate_labels")
-parser.add_argument("--output_dir", type=str, default="afl_frames_yolo")
+parser.add_argument("--data", type=str, default="data")
+parser.add_argument("--annotation_dir", type=str, default="auto_annotate_labels")
+parser.add_argument("--output_dir", type=str, default="yolo_annotations")
 
 
 args = parser.parse_args()
