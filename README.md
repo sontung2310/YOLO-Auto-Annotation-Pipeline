@@ -20,6 +20,9 @@ After generating mask annotations, convert them into YOLO-compatible bounding bo
 
 <pre> python convert_masks_to_yolo.py --data "path/to/images/folder" --annotation_dir "path/to/annotation/folder" --output_dir "path/to/saved/folder" </pre>
 
+The bounding box annotations for training YOLO are now saved in "path/to/saved/folder". You can use these annotations to train any YOLO version without manual labeling, saving you valuable time and effort.
+
+
 For example:
 
 <pre> python convert_masks_to_yolo.py --data afl_frames --annotation_dir afl_frames_auto_annotate_labels --output_dir afl_frames_yolo </pre>
@@ -27,4 +30,3 @@ For example:
 ## Example result
 The annotated masks and bounding boxes are visualized on the original image to verify the accuracy of the annotation pipeline.
 ![Annotation Comparison](annotation_comparison_afl_frames.png)
-
